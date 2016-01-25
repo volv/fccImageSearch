@@ -23,6 +23,6 @@
   "dependencies": {
     "express": "^4.12.4",
     "express-session": "^1.11.3",
-    "moment": "^2.11.1",
+    "moment": "^2.11.1"
   }
 }
