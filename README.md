@@ -5,11 +5,11 @@
     </head>
     <body>
         <div class="container">
-            <h1 class="header">Available at https://fccbackend-volv.c9users.io/ for a while and https://polar-stream-77892.herokuapp.com/ more reliably</h1>
             <h1 class="header">
                 API Basejump: Timestamp microservice
             </h1>
             <blockquote>
+                Available at https://fccbackend-volv.c9users.io/ for a while and https://polar-stream-77892.herokuapp.com/ more reliably<br>
                 User stories:
                 <ul>1) I can pass a string as a parameter, and it will check to see whether that string 
                 contains either a unix timestamp or a natural language date (example: January 1, 2016)</ul>
