@@ -1,11 +1,11 @@
 'use strict';
 
 var path = process.cwd();
-var timestamp = require(path + '/app/api/timestamp.js');
+var timestamp = require(path + '/app/api/header-parser.js');
 
 module.exports = function (app, passport) {
 	
-	app.route('/:date')
+	app.route('/:anything')
 		.get(function(req, res) {
 			timestamp(req, res)
 		})

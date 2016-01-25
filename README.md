@@ -6,12 +6,12 @@
     <body>
         <div class="container">
             <h1 class="header">
-                Mean Stack - Starting Point
+                Header Parser
             </h1>
             <h3>Better starting point that massive clementine.js?</h3>
             <code>
-            mongod --smallfiles<br>
-            node server.js
+            Visit any other route.<br>
+            <a href="/anything">Anything</a>
             </code>
         </div>
     </body>
