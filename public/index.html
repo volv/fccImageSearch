@@ -10,7 +10,7 @@
             </h1>
             <h3>Better starting point that massive clementine.js?</h3>
             <code>
-            mongod --smallfiles
+            mongod --smallfiles<br>
             node server.js
             </code>
         </div>
