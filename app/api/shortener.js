@@ -1,0 +1,31 @@
+"use strict";
+var validurl = require('valid-url');
+
+module.exports = function(req, res) {
+
+    var shortSites = req.app.locals.sites;
+
+    var urlPart = req.params[0];
+    var allowBad = req.query.allow;
+
+    function nextUrl(url) {
+        return "https://fccbackend-volv.c9users.io/" + shortSites.length;
+    }
+
+    if (validurl.isWebUri(urlPart) || allowBad === "true") {
+
+        var original_url = urlPart;
+        var short_url = nextUrl(original_url);
+
+        var result = {
+            original_url, short_url
+        };
+        
+        shortSites.push(result);
+        res.status(200).json(result);
+    }
+    else {
+        res.status(400).send('Bad Request <br>Append URL to /new/ to get shortened link<br>Use <b>?allow=true</b> to force conversion')
+    }
+
+}
