@@ -9,7 +9,9 @@ module.exports = function(req, res) {
     var allowBad = req.query.allow;
 
     function nextUrl(url) {
-        return "https://fccbackend-volv.c9users.io/" + shortSites.length;
+        var fullUrl = req.protocol + 's://' + req.get('host') +"/";
+        console.log (fullUrl)
+        return fullUrl + shortSites.length;
     }
 
     if (validurl.isWebUri(urlPart) || allowBad === "true") {
@@ -25,7 +27,7 @@ module.exports = function(req, res) {
         res.status(200).json(result);
     }
     else {
-        res.status(400).send('Bad Request <br>Append URL to /new/ to get shortened link<br>Use <b>?allow=true</b> to force conversion')
+        res.status(400).send('Bad Request <br>Append URL (with http(s):// to /new/ to get shortened link<br>Use <b>?allow=true</b> to force conversion')
     }
 
 }
