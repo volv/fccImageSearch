@@ -1,13 +1,32 @@
 'use strict';
-
 var express = require('express');
-var routes = require('./app/routes/index.js');
+var shortener = require('./app/routes/shortener.js');
 
 var app = express();
 
-routes(app);
+app.locals.sites = [];
 
+shortener(app);
+
+app.get('/:num', function(req, res, next) {
+
+    var passedNum = req.params.num;
+
+    if (Number(passedNum) < app.locals.sites.length)
+        res.redirect(app.locals.sites[passedNum].original_url);
+    else {
+        next();
+    }
+
+});
+
+app.use(notFound);
+
+function notFound(req, res, next) {
+    res.status(404).send("404 - VolvErrorMog<br>File Not Found");
+    next();
+}
 var port = process.env.PORT || 8080;
-app.listen(port,  function () {
-	console.log('Node.js listening on port ' + port + '...');
+app.listen(port, function() {
+    console.log('Node.js listening on port ' + port + '...');
 });

@@ -2,6 +2,7 @@
   "name": "header-parser",
   "version": "1.0.0",
   "description": "Super lightweight barely boilerplate",
+  "license": "Unlicense",
   "main": "server.js",
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
     "express": "^4.12.4",
     "express-session": "^1.11.3",
     "moment": "^2.11.1",
-    "nodemon": "^1.8.1"
+    "nodemon": "^1.8.1",
+    "valid-url": "^1.0.9"
   }
 }
