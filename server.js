@@ -1,8 +1,15 @@
 'use strict';
 var express = require('express');
 var shortener = require('./app/routes/shortener.js');
+var bodyparser = require('body-parser')
+var morgan = require('morgan')
 
 var app = express();
+
+app.use(bodyparser.urlencoded({     // to support URL-encoded bodies
+  extended: true
+})); 
+app.use(morgan("combined"));
 
 app.locals.sites = [];
 

@@ -5,8 +5,10 @@ module.exports = function(req, res) {
 
     var shortSites = req.app.locals.sites;
 
-    var urlPart = req.params[0];
+    var urlPart = req.params[0] || req.body.original_url;
     var allowBad = req.query.allow;
+
+    console.log("ALLOWED???", allowBad)
 
     function nextUrl(url) {
         var fullUrl = req.protocol + 's://' + req.get('host') +"/";
