@@ -27,7 +27,7 @@ module.exports = function(req, res) {
         res.status(200).json(result);
     }
     else {
-        res.status(400).send('Bad Request <br>Append URL (with http(s):// to /new/ to get shortened link<br>Use <b>?allow=true</b> to force conversion')
+        res.status(400).send('Bad Request <br>Append URL (with http(https)://) to /new/ to get shortened link<br>Use <b>?allow=true</b> to force conversion')
     }
 
 }
