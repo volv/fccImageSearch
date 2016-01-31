@@ -1,5 +1,6 @@
 "use strict";
 var validurl = require('valid-url');
+// Irrelevant CSS snippet .element { position: relative; top: 50%; transform: translateY(-50%); }
 
 module.exports = function(req, res) {
 

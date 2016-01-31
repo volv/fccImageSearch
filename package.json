@@ -23,6 +23,7 @@
   "author": "Steven Bigham",
   "dependencies": {
     "body-parser": "^1.14.2",
+    "ejs": "^2.4.1",
     "express": "^4.12.4",
     "express-session": "^1.11.3",
     "moment": "^2.11.1",
